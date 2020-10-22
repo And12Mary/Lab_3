@@ -16,14 +16,14 @@ function on_error(e)
 {
 	document.getElementById("text").innerHTML=e.message;
 }
-var locatie_params=
+var geo_params=
 {
-	enableHighAccuracy:true,
-	timeout:1000,
-	maximumAge:0
+	enableHighAccuracy:true;
+	timeout:1000;
+	maximumAge:0;
 };
-function get_locatie_position()
+function get_geo_position()
 {
-	var locatie=navigator.locatielocation;
-	locatie.getCurrentPosition(on_success,on_error,locatie_params)
+	var geo=navigator.geolocation;
+	geo.getCurrentPosition(on_success,on_error,geo_params);
 }
