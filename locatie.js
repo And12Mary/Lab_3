@@ -2,10 +2,10 @@ get_geo_position();
 function on_success(position){
 	document.getElementById("latitude").innerHTML="Latitude="+position.coords.latitude;
 	document.getElementById("longitude").innerHTML="Longitude="+position.coords.longitude;
-	document.getElementById("acc").innerHTML="Acc="+position.coords.accuracy;
+	document.getElementById("acc").innerHTML="Accuray="+position.coords.accuracy;
 	document.getElementById("altitude").innerHTML="Altitude="+position.coords.altitude;
 	var latlon=position.coords.latitude+","+position.coords.longitude;
-	var img_url=
+	var img_url =
 	"https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400X300&key=AIzaSyC6Tq7hE-WEVGj6DVmLJ38GZKybToFHWjs ";
 	
 	document.getElementById("map").innerHTML="<img src=' "+img_url+" '>";
@@ -25,5 +25,5 @@ var geo_params=
 function get_geo_position()
 {
 	var geo=navigator.geolocation;
-	geo.getCurrentPosition(on_success,on_error,geo_params);
+	geo.getCurrentPosition(on_success,on_error,geo_params)
 }
