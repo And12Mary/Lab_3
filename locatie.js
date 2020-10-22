@@ -18,9 +18,9 @@ function on_error(e)
 }
 var geo_params=
 {
-	enableHighAccuracy:true;
-	timeout:1000;
-	maximumAge:0;
+	enableHighAccuracy:true,
+	timeout:1000,
+	maximumAge:0
 };
 function get_geo_position()
 {
