@@ -8,7 +8,7 @@ function on_success(position){
 	var img_url=
 	"https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400X300&key=AIzaSyC6Tq7hE-WEVGj6DVmLJ38GZKybToFHWjs ";
 	
-	document.getElementById("map").innerHTML="imag src=' "+img_url+" '>";
+	document.getElementById("map").innerHTML="<img src=' "+img_url+" '>";
 	
 	
 }
