@@ -6,7 +6,7 @@ function on_success(position){
 	document.getElementById("altitude").innerHTML="Altitude="+position.coords.altitude;
 	var latlon=position.coords.latitude+","+position.coords.longitude;
 	var img_url=
-	"https:maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400X300&key=AIzaSyC6Tq7hE-WEVGj6DVmLJ38GZKybToFHWjs ";
+	"https:maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&key=AIzaSyC6Tq7hE-WEVGj6DVmLJ38GZKybToFHWjs ";
 	
 	document.getElementById("map").innerHTML="imag src=' "+img_url+" '>";
 	
@@ -16,14 +16,14 @@ function on_error(e)
 {
 	document.getElementById("text").innerHTML=e.message;
 }
-var geo_params=
+var locatie_params=
 {
 	enableHighAccuracy:true,
 	timeout:1000,
 	maximumAge:0
 };
-function get_geo_position()
+function get_locatie_position()
 {
-	var geo=navigator.geolocation;
-	geo.getCurrentPosition(on_success,on_error,geo_params)
+	var locatie=navigator.locatielocation;
+	locatie.getCurrentPosition(on_success,on_error,locatie_params)
 }
